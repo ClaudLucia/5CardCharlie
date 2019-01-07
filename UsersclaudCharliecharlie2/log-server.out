@@ -1,0 +1,53 @@
+15:47:07 INFO  main 0 GameServer:62 - game server started
+15:47:07 INFO  main 5 GameServer:73 - house started
+15:47:07 INFO  Thread-0 13 Actor:185 - House waiting for connection on port 1235
+15:47:45 INFO  main 37562 Actor:75 - got login
+15:47:45 INFO  main 37563 Actor:80 - validated ticket BB20B45FD4D95138 login successful!
+15:47:45 INFO  main 37566 Actor:185 - ServerAuthenticator sent ticket to client
+15:47:45 INFO  Thread-0 37585 Actor:185 - House accepted connection on port 1235
+15:47:45 INFO  Thread-0 37614 Actor:185 - House received message Arrival
+15:47:45 INFO  Thread-0 37614 Actor:185 - House invoking listener for Arrival
+15:47:45 INFO  Thread-0 37615 House:101 - validated ticket = BB20B45FD4D95138
+15:47:45 INFO  Thread-0 37616 House:105 - arrival from ClaudiaPC/192.168.0.13
+15:47:45 INFO  Thread-0 37624 Dealer:91 - using scenario = 'charlie.bot.test.Shoe'
+15:47:45 INFO  Thread-0 37631 Shoe:102 - shuffling burn index = 295
+15:47:45 INFO  Thread-0 37632 Dealer:97 - shoe = charlie.bot.test.Shoe: S10 C6 C9 H6 CQ D8 S9 C7 DQ D7 SA C5 S3 H9 D5 
+15:47:45 INFO  Thread-0 37654 Actor:185 - RealPlayer sending Ready to 192.168.0.13:8001
+15:47:45 INFO  Thread-1 37654 Actor:185 - RealPlayer waiting for connection on port 8501
+15:47:45 INFO  Thread-0 37665 Actor:185 - RealPlayer sent successfully Ready to 192.168.0.13:8001
+15:47:45 INFO  Thread-0 37665 Actor:185 - House waiting for connection on port 1235
+15:47:56 INFO  Thread-1 48525 Actor:185 - RealPlayer accepted connection on port 8501
+15:47:56 INFO  Thread-1 48541 Actor:185 - RealPlayer received message Bet
+15:47:56 INFO  Thread-1 48541 Actor:185 - RealPlayer invoking listener for Bet
+15:47:56 INFO  Thread-1 48542 Actor:185 - RealPlayer received bet = 50.0
+15:47:56 INFO  Thread-1 48542 Dealer:109 - got new bet = 50.0 side bet = 0.0 from ClaudiaPC/192.168.0.13 for hid = ClaudiaPC:YOU:42DB5408EE6006B
+15:47:56 INFO  Thread-1 48542 Dealer:164 - no bot configured for charlie.bot.huey
+15:47:56 INFO  Thread-1 48543 Dealer:164 - no bot configured for charlie.bot.dewey
+15:47:56 INFO  Thread-1 48543 Dealer:258 - starting a game
+15:47:56 INFO  Thread-1 48543 Dealer:273 - hands at table + dealer = 2
+15:47:56 INFO  Thread-1 48544 Actor:185 - RealPlayer sending GameStart to 192.168.0.13:8001
+15:47:56 INFO  Thread-1 48548 Actor:185 - RealPlayer sent successfully GameStart to 192.168.0.13:8001
+15:47:56 INFO  Thread-1 48799 Shoe:111 - cards size = 312 burn index = 295 index = 0
+15:47:56 INFO  Thread-1 48799 Shoe:135 - index = 1 burnIndex = 295 shuffle needed = false
+15:47:56 INFO  Thread-1 48799 Dealer:352 - dealing to ClaudiaPC/192.168.0.13 card 1 = S10
+15:47:57 INFO  Thread-1 49550 Actor:185 - RealPlayer sending Deal to 192.168.0.13:8001
+15:47:57 INFO  Thread-1 49554 Actor:185 - RealPlayer sent successfully Deal to 192.168.0.13:8001
+15:47:57 INFO  Thread-1 49555 Shoe:111 - cards size = 312 burn index = 295 index = 1
+15:47:57 INFO  Thread-1 49555 Shoe:135 - index = 2 burnIndex = 295 shuffle needed = false
+15:47:58 INFO  Thread-1 50306 Actor:185 - RealPlayer sending Deal to 192.168.0.13:8001
+15:47:58 INFO  Thread-1 50309 Actor:185 - RealPlayer sent successfully Deal to 192.168.0.13:8001
+15:47:58 INFO  Thread-1 50309 Shoe:111 - cards size = 312 burn index = 295 index = 2
+15:47:58 INFO  Thread-1 50309 Shoe:135 - index = 3 burnIndex = 295 shuffle needed = false
+15:47:58 INFO  Thread-1 50310 Dealer:352 - dealing to ClaudiaPC/192.168.0.13 card 1 = C9
+15:47:59 INFO  Thread-1 51060 Actor:185 - RealPlayer sending Deal to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51064 Actor:185 - RealPlayer sent successfully Deal to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51064 Shoe:111 - cards size = 312 burn index = 295 index = 3
+15:47:59 INFO  Thread-1 51065 Shoe:135 - index = 4 burnIndex = 295 shuffle needed = false
+15:47:59 INFO  Thread-1 51816 Actor:185 - RealPlayer sending Deal to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51824 Actor:185 - RealPlayer sent successfully Deal to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51827 Dealer:555 - going to next hand
+15:47:59 INFO  Thread-1 51831 Dealer:565 - active player = ClaudiaPC/192.168.0.13
+15:47:59 INFO  Thread-1 51832 Dealer:605 - sending turn ClaudiaPC:YOU:42DB5408EE6006B to ClaudiaPC/192.168.0.13
+15:47:59 INFO  Thread-1 51833 Actor:185 - RealPlayer sending Play to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51841 Actor:185 - RealPlayer sent successfully Play to 192.168.0.13:8001
+15:47:59 INFO  Thread-1 51844 Actor:185 - RealPlayer waiting for connection on port 8501
