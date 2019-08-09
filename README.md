@@ -23,7 +23,7 @@ Actors are, rightly, at the bottom of the Charlie software stack, below the
 UI and plugins. So plugin developers may never encounter the actors or need to know
 much about them.
 
-###Why Blackjack?
+### Why Blackjack?
 Games are powerful tools in their own right for teaching.
 Blackjack, in particular, is an example of an excellent game design, that is,
 it is easy to play yet difficult to master.
@@ -41,7 +41,7 @@ books and on the Internet for that which I will reference.
 My primary focus is to explore how to extend Charlie through its
 plugin system.
 
-###A brief history of Blackjack
+### A brief history of Blackjack
 The roots of Blackjack roots go back to Don Quixote and Seville and the 17th
 century.
 However, serious study of Blackjack began in the 1950s with long-running computer
@@ -80,7 +80,7 @@ Unlike Charlie, the Scala version was not
 distributed and had no plugins, GUI, animations, or sounds. It was really
 a bare bones application for demonstration purposes.
 
-###Basic ideas
+### Basic ideas
 Charlie is uses a client-server architecture organized around the
 [model view controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern. In
 this pattern the dealer behaves like a controller, the client side like a view
@@ -139,7 +139,7 @@ interfaces to a "real" player on the client side, Deal is completely unaware
 of the networking hierarchy. As the controller in MVC, Dealer is the controller
 with different views.
 
-###Plugins
+### Plugins
 Charlie has six (6) types of plugins:
 
 1. Shoe
@@ -156,7 +156,7 @@ Charlie recovers gracefully and runs without the plugin. The only
 exception the shoe plugins. Charlie requires a shoe and
 the server crashes without one. 
 
-###Shoe plugin
+### Shoe plugin
 A shoe contains instances of *Card* objects from which Dealer deals to players.
 A shoe must implement *IShoe*, a Java interface.
 Built into Charlie is a concrete class, *Shoe*, which implements IShoe.
@@ -183,7 +183,7 @@ You have to make certain the IShoe implementation is in the Charlie project
 class path. You do this by adding a jar or project to the IDE. Either one
 works.
 
-###Cards
+### Cards
 There are two types of cards: *Card* and *ACard*.
 The controller (i.e., Dealer) and the view (i.e., *ATable*) use
 Card. Only the view uses ACard. 
@@ -214,7 +214,7 @@ on the table. ACard relentlessly seeks its home from its
 current position by following a Euclidean straight line. This
 what gives the impression of "card motion" on the table.
 
-###IBot plugin
+### IBot plugin
 Named after Robot B9 from [Lost in Space](http://en.wikipedia.org/wiki/Lost_in_Space) and
 Nexus 6 in [Blade Runner] (http://en.wikipedia.org/wiki/Blade_Runner),
 these bots implement *IBot*, a sub-interface of IPlayer.
@@ -281,7 +281,7 @@ For instance, B9 might use the [Wizard of Odds](http://wizardofodds.com/games/bl
 BTW, the Dealer does not, at the moment, support splits and that fact cuts down
 on the number of cells on both cases.
 
-###Gerty plugin
+### Gerty plugin
 Named after the robot Gerty 3000 in [Moon](http://en.wikipedia.org/wiki/Moon_(film)),
 these bots implement *IGerty* which, like IBot, is a sub-interface of IPlayer.
 Unlike IBot, IGerty bots run on the client-side.
@@ -341,7 +341,7 @@ To play a double-down, IGerty does the following:
 Of course, after double-down, IGerty is done for the game and just waits
 for endGame.
 
-###Side bet plugin
+### Side bet plugin
 A side bet is a bet in addition to the
 the main bet. The side bet usually depends on certain
 card combinations.
@@ -392,7 +392,7 @@ and the side bet rule sets -5 as the side bet.
 IPlayer receives the blackjack message and adds 15 minus 5 = 10 to the IPlayer bankroll.
 The table invokes _setHid_ on ISideBetView to indicate the side bet loss.
 
-###Advisor plugin
+### Advisor plugin
 This plugin monitors the player and when a play discrepancy is
 detected, it issues a warning.
 For instance, suppose we have Ace vs. 10+6. The Basic Strategy says hit.
@@ -407,10 +407,10 @@ you must specify the fully qualified concrete class name.
 IAdvisor receives the player's hand and the dealer's up-card. IAdvisor
 has to analyze these and return a response that are in the *Play* enum:
 
-* HIT
-* STAY
-* DOUBLE_DOWN
-* SPLIT
-* NONE
+*HIT
+*STAY
+*DOUBLE_DOWN
+*SPLIT
+*NONE
 
 If IAdvisor cannot be loaded for some reason, the default is no advice.
