@@ -407,10 +407,10 @@ you must specify the fully qualified concrete class name.
 IAdvisor receives the player's hand and the dealer's up-card. IAdvisor
 has to analyze these and return a response that are in the *Play* enum:
 
-*HIT
-*STAY
-*DOUBLE_DOWN
-*SPLIT
-*NONE
+* HIT
+* STAY
+* DOUBLE_DOWN
+* SPLIT
+* NONE
 
 If IAdvisor cannot be loaded for some reason, the default is no advice.
